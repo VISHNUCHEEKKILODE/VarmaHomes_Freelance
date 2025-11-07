@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varma Homes - Queen Gateway</title>
+  <link rel="stylesheet" href="styles.css"> <!-- ✅ Make sure this path matches your CSS file location -->
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-container">
+
+      <!-- Left content -->
+      <div class="hero-left">
+
+        <!-- Logos (inside background) -->
+        <div class="logo-container">
+          <img src="images/varmaLogo.png" alt="Varma Homes Logo" class="varma-logo">
+          <br><br><br>
+          <img src="images/Queengateway.png" alt="Queens Gateway Logo" class="queens-logo">
+        </div>
+
+        <!-- Heading -->
+        <h1>The<br>Gateway<br>To Kochi</h1>
+
+        <!-- Location Tag -->
+        <div class="location-tag">
+          <img src="images/LocationLogo.png" alt="Location Icon">
+          <span>Cheranalloor, Edapally</span>
+        </div>
+      </div>
+
+      <!-- Right side form -->
+      <div class="hero-form">
+        <h2 align = "center">Quick Enquiry</h2>
+        <p align = "center">Just fill in the form and our expert advisors will guide you...</p>
+
+
+        <form id="contact-form">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone" placeholder="Contact Number" required>
+  <textarea name="message" placeholder="Requirements" rows="5"></textarea>
+  <button type="submit">SUBMIT →</button>
+</form>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("6U3AdmrHdPvXIrGvf"); // Replace with your public key
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_9uth9go', 'template_gq7mxbl', this)
+      .then(function() {
+        alert('✅ Message sent successfully!');
+        window.location.href = "thankyou.html";
+      }, function(error) {
+        alert('❌ Failed to send message: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+
+
+      </div>
+
+    </div>
+  </section>
+  <!-- ABOUT / DETAILS SECTION -->
+<section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-box">
+        <h2 align = "center">10+</h2>
+        <p align = "center">Years Old Company</p>
+      </div>
+      <div class="stat-box">
+        <h2 align = "center">30+</h2>
+        <p align = "center">Years in Real Estate</p>
+      </div>
+      <div class="stat-box">
+        <h2 align = "center">26+</h2>
+        <p align = "center">Projects</p>
+      </div>
+      <div class="stat-box">
+        <h2 align = "center">3+</h2>
+        <p align = "center">Locations</p>
+      </div>
+    </div>
+  </section>
+
+
+</body>
