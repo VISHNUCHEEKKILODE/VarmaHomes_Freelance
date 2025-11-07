@@ -1,2 +1,86 @@
-# VarmaHomes_Freelance
-This is a varma homes testing project 
+# VarmaHomes_Freelance Email content customization code
+------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 20px;
+      }
+      .container {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 25px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #c41e3a;
+        border-bottom: 2px solid #ffd000;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .field {
+        margin: 15px 0;
+      }
+      .label {
+        font-weight: bold;
+        color: #555;
+      }
+      .value {
+        background: #f3f3f3;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 5px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 13px;
+        color: #777;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>📩 New Enquiry from Varma Homes Website</h2>
+
+      <div class="field">
+        <div class="label">👤 Name:</div>
+        <div class="value">{{name}}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">📧 Email:</div>
+        <div class="value">{{email}}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">📱 Contact Number:</div>
+        <div class="value">{{phone}}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">📝 Requirements:</div>
+        <div class="value">{{message}}</div>
+      </div>
+
+      <div class="footer">
+        <p>This enquiry was sent from the <b>Queen Gateway</b> website form.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+------------------------------------------
+
